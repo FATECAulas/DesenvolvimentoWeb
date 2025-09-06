@@ -10,7 +10,7 @@ body{
 }
 
 .container{
-    max-width: 800px;
+    max-width: 50%;
     margin: 0 auto;
     background: rgb(255, 250, 254);
     border-radius: 50px;
@@ -92,4 +92,32 @@ img:hover{
 #marrom:hover{
     background-color: rgb(153, 100, 100);
     color: white;
+}
+
+/* BOTÃO VOLTAR */
+.btn {
+  padding: 1rem 2rem;
+  font-weight: 700;
+  background: rgb(255, 250, 254);
+  cursor: pointer;
+  border-radius: 0.5rem;
+  border-bottom: 2px solid #e66a7b;
+  border-right: 2px solid #e66a7b;
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+  transition-duration: 1s;
+}
+
+.btn:hover {
+  border-top: 2px solid #e66a7b;
+  border-left: 2px solid #f58b99;
+  border-bottom: 2px solid rgb(243, 197, 243);
+  border-right: 2px solid rgb(219, 135, 252);
+  box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px,
+    rgba(240, 46, 170, 0.2) 15px 15px;
+}
+
+a{
+    text-decoration: none;
+    color: #e66a7b;
 }
