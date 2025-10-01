@@ -10,6 +10,10 @@ body{
     background-color: #f4f1e9;
 }
 
+.carousel-item img{
+    height: 900px;
+}
+
 img{
     width: 100%;
 }
