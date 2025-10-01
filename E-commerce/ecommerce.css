@@ -1,17 +1,48 @@
+body{
+    background-color: #f4f1e9;
+}
+
 .navbar{
-    background-color: rgb(218, 218, 218);
+    background-color: #d68752;
+}
+
+.carousel-inner{
+    background-color: #f4f1e9;
 }
 
 img{
     width: 100%;
 }
 
+#imgs{
+    height: 260px;
+}
+
 .card{
     margin-top: 5%;
     margin-left: 10%;
+    box-shadow: 6px 6px 0px #fdb837;
+    border-color: #e0d1b5;
+}
+
+.btn-primary{
+    background-color: #c55103;
+    border-color: #c55103;
+    display: flex;
+    justify-content: center;
+    margin-top: 16%;
+}
+
+.btn-primary:hover{
+    background-color: #a14405;
+    border-color: #a14405;
 }
 
 footer{
-    background-color: rgb(212, 212, 212);
+    background-color: rgb(71, 35, 5);
     margin-top: 10%;
+}
+
+.mb-3{
+    color: #fff7e2;
 }
