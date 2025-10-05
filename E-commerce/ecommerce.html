@@ -1,37 +1,45 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bruxa_61 — E-commerce</title>
+
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
-    <title>E-commerce</title>
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Seu CSS -->
     <link rel="stylesheet" href="ecommerce.css">
+
+    <!-- Bootstrap Bundle JS -->
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
   </head>
-  <body class="p-3 m-0 border-0 bd-example m-0 border-0">
+  <body>
+
     <!-- NAVBAR -->
-    <nav class="navbar">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Bruxa_61</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+          <img src="img/bottons (2).png" alt="Ícone" class="img-redonda">
+          <span class="brand-text">Bruxa_61</span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+          aria-controls="mainNav" aria-expanded="false" aria-label="Abrir menu">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Produtos</a>
-            </li>
-             <li class="nav-item">
-              <a class="nav-link" href="../index.html">Voltar</a>
-            </li>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-3 me-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Produtos</a></li>
+            <li class="nav-item"><a class="nav-link" href="../index.html">Voltar</a></li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Categoria
-              </a>
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Categoria</a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="#">Adesivos</a></li>
                 <li><a class="dropdown-item" href="#">Prints</a></li>
@@ -39,132 +47,195 @@
               </ul>
             </li>
           </ul>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn" type="submit">Search</button>
+
+          <form class="d-flex align-items-center" role="search" onsubmit="return false;">
+            <div class="input-group me-2">
+              <input class="form-control" type="search" placeholder="Buscar produtos..." aria-label="Buscar">
+              <button class="btn btn-outline-light" type="submit" aria-label="Buscar">
+                <i class="bi bi-search"></i>
+              </button>
+            </div>
+            <a class="btn btn-light btn-sm me-2" href="#" title="Carrinho"><i class="bi bi-cart3"></i></a>
+            <a class="btn btn-outline-light btn-sm" href="#" title="Login">Entrar</a>
           </form>
         </div>
       </div>
     </nav>
-    <!-- Example Code End -->
 
-    <!--CARROSEL-->
-    <div id="carouselExample" class="carousel slide">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="img/e-commerce2.png" alt="" class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" height="700" preserveAspectRatio="xMidYMid slice" role="img" width="800" xmlns="http://www.w3.org/2000/svg"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect></img>
+    <!-- HERO / CAROUSEL -->
+    <section class="hero">
+      <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" aria-label="Destaques">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="hero-slide" style="background-image:url('img/e-commerce\ \(1\).png')">
+              <div class="hero-overlay container">
+                <h1 class="display-5">Arte que encanta ✨</h1>
+                <p class="lead">Adesivos, prints e bottons com toque artesanal — frete a partir de R$ 9,90</p>
+                <a class="btn btn-cta" href="#produtos">Ver produtos</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="hero-slide" style="background-image:url('img/e-commerce\ \(1\).png')">
+              <div class="hero-overlay container">
+                <h1 class="display-5">Colecione momentos</h1>
+                <p class="lead">Prints A5 com ilustrações exclusivas</p>
+                <a class="btn btn-cta" href="#produtos">Coleção</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="hero-slide" style="background-image:url('img/e-commerce\ \(1\).png')">
+              <div class="hero-overlay container">
+                <h1 class="display-5">Peças únicas</h1>
+                <p class="lead">Acabamento premium e opções holográficas</p>
+                <a class="btn btn-cta" href="#produtos">Saiba mais</a>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="carousel-item">
-          <img src="img/e-commerce.png" alt="" class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" height="700" preserveAspectRatio="xMidYMid slice" role="img" width="800" xmlns="http://www.w3.org/2000/svg"><title>Placeholder</title><rect width="100%" height="100%" fill="#666"></rect></img>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Próximo</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- PRODUTOS -->
+    <main class="container my-5" id="produtos">
+      <div class="d-flex align-items-center justify-content-between mb-4">
+        <h2 class="section-title mb-0">Destaques</h2>
+        <small class="text-muted">Mostrando 4 produtos</small>
+      </div>
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+        <!-- Card 1 -->
+        <div class="col">
+          <article class="card product-card h-100">
+            <div class="card-img-top ratio ratio-4x3 overflow-hidden">
+              <img src="https://i.pinimg.com/1200x/ee/f7/e0/eef7e087821ad9d01a4d6599c6ce81ca.jpg" alt="Adesivo peixe" class="object-fit">
+            </div>
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Peixe — Adesivo holográfico</h5>
+              <p class="card-text text-muted small">7 cm • Autocolante vinil</p>
+              <div class="mt-auto d-flex align-items-center justify-content-between">
+                <div>
+                  <span class="badge price">R$ 7,00</span>
+                </div>
+                <div class="btn-group">
+                  <a href="#" class="btn btn-sm btn-outline-secondary">Ver</a>
+                  <a href="#" class="btn btn-sm btn-primary">Comprar</a>
+                </div>
+              </div>
+            </div>
+          </article>
         </div>
-        <div class="carousel-item">
-          <img src="img/e-commerce3.png" alt="" class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" height="700" preserveAspectRatio="xMidYMid slice" role="img" width="800" xmlns="http://www.w3.org/2000/svg"><title>Placeholder</title><rect width="100%" height="100%" fill="#555"></rect></img>
+
+        <!-- Card 2 -->
+        <div class="col">
+          <article class="card product-card h-100">
+            <div class="card-img-top ratio ratio-4x3 overflow-hidden">
+              <img src="https://i.pinimg.com/736x/70/10/c5/7010c516c2638445cab8bbf2903ada5a.jpg" alt="Print borboletas" class="object-fit">
+            </div>
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Borboletas — Print A5</h5>
+              <p class="card-text text-muted small">Papel fosco 200g</p>
+              <div class="mt-auto d-flex align-items-center justify-content-between">
+                <div><span class="badge price">R$ 15,00</span></div>
+                <div class="btn-group">
+                  <a href="#" class="btn btn-sm btn-outline-secondary">Ver</a>
+                  <a href="#" class="btn btn-sm btn-primary">Comprar</a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col">
+          <article class="card product-card h-100">
+            <div class="card-img-top ratio ratio-4x3 overflow-hidden">
+              <img src="https://i.pinimg.com/736x/3d/64/7e/3d647e8abae4dd67ea52fdf5fd13ad1c.jpg" alt="Print compras" class="object-fit">
+            </div>
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Compras — Print A5</h5>
+              <p class="card-text text-muted small">Edição limitada</p>
+              <div class="mt-auto d-flex align-items-center justify-content-between">
+                <div><span class="badge price">R$ 15,00</span></div>
+                <div class="btn-group">
+                  <a href="#" class="btn btn-sm btn-outline-secondary">Ver</a>
+                  <a href="#" class="btn btn-sm btn-primary">Comprar</a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="col">
+          <article class="card product-card h-100">
+            <div class="card-img-top ratio ratio-4x3 overflow-hidden">
+              <img src="https://i.pinimg.com/736x/3b/ad/78/3bad78b516ab19c713559a520857f72d.jpg" alt="Gato Flor print" class="object-fit">
+            </div>
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Gato Flor — Print A5</h5>
+              <p class="card-text text-muted small">Ótimo para presente</p>
+              <div class="mt-auto d-flex align-items-center justify-content-between">
+                <div><span class="badge price">R$ 15,00</span></div>
+                <div class="btn-group">
+                  <a href="#" class="btn btn-sm btn-outline-secondary">Ver</a>
+                  <a href="#" class="btn btn-sm btn-primary">Comprar</a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+      </div> <!-- /row -->
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-md-4 mb-3">
+            <h6>LINKS ÚTEIS</h6>
+            <ul class="list-unstyled">
+              <li><a href="#">Produtos</a></li>
+              <li><a href="#">Sobre Nós</a></li>
+              <li><a href="../index.html">Voltar</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4 mb-3">
+            <h6>CONTATO</h6>
+            <ul class="list-unstyled">
+              <li><a href="tel:+5511987654321">(11) 98765-4321</a></li>
+              <li><a href="mailto:bruxa61@gmail.com">bruxa61@gmail.com</a></li>
+              <li><a href="https://instagram.com/bruxa_61" target="_blank" rel="noopener">@bruxa_61</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4 mb-3 text-md-end">
+            <h6>Assine</h6>
+            <form class="d-flex gap-2 justify-content-end" onsubmit="return false;">
+              <input class="form-control form-control-sm" placeholder="Seu email" aria-label="Email">
+              <button class="btn btn-sm btn-primary">OK</button>
+            </form>
+          </div>
         </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-    <!-- Example Code End -->
 
-    <!--CARD-->
-    <div class="container my-5"> <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 justify-content-center"> <div class="col">
-            <div class="card h-100"> 
-              <img id="imgs" src="https://i.pinimg.com/1200x/ee/f7/e0/eef7e087821ad9d01a4d6599c6ce81ca.jpg" alt="" class="bd-placeholder-img card-img-top" height="180" preserveAspectRatio="xMidYMid slice" role="img" width="100%" xmlns="http://www.w3.org/2000/svg"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></img>
-                <div class="card-body">
-                    <h5 class="card-title">Peixe</h5>
-                    <p class="card-text">Adesivo holográfico, 7cm</p>
-                    <a href="#" class="btn btn-primary">R$ 7,00</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col">
-            <div class="card h-100">
-                <img id="imgs" src="https://i.pinimg.com/736x/70/10/c5/7010c516c2638445cab8bbf2903ada5a.jpg" alt="" class="bd-placeholder-img card-img-top" height="180" preserveAspectRatio="xMidYMid slice" role="img" width="100%" xmlns="http://www.w3.org/2000/svg"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></img>
-                <div class="card-body">
-                    <h5 class="card-title">Borboletas</h5>
-                    <p class="card-text">Print A5</p>
-                    <a href="#" class="btn btn-primary">R$ 15,00</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col">
-            <div class="card h-100">
-                <img id="imgs" src="https://i.pinimg.com/736x/3d/64/7e/3d647e8abae4dd67ea52fdf5fd13ad1c.jpg" alt="" class="bd-placeholder-img card-img-top" height="180" preserveAspectRatio="xMidYMid slice" role="img" width="100%" xmlns="http://www.w3.org/2000/svg"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></img>
-                <div class="card-body">
-                    <h5 class="card-title">Compras</h5>
-                    <p class="card-text">Print A5</p>
-                    <a href="#" class="btn btn-primary">R$ 15,00</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col">
-            <div class="card h-100">
-                <img id="imgs" src="https://i.pinimg.com/736x/3b/ad/78/3bad78b516ab19c713559a520857f72d.jpg" alt="" class="bd-placeholder-img card-img-top" height="180" preserveAspectRatio="xMidYMid slice" role="img" width="100%" xmlns="http://www.w3.org/2000/svg"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></img>
-                <div class="card-body">
-                    <h5 class="card-title">Gato Flor</h5>
-                    <p class="card-text">Print A5</p>
-                    <a href="#" class="btn btn-primary">R$ 15,00</a>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</div>
-    <!-- Example Code End -->
-
-
-  <!-- Footer -->
-   <footer>
-    <div class="container p-4">
-      <div class="row">
-        <div class="col-lg-3 col-md-6 mb-4">
-          <h5 class="mb-3" style="letter-spacing: 2px;">LINKS ÚTEIS</h5>
-          <ul class="list-unstyled mb-0">
-            <li class="mb-1">
-              <a href="#!" style="color: #fff;">Produtos</a>
-            </li>
-            <li class="mb-1">
-              <a href="#!" style="color: #fff;">Sobre Nós</a>
-            </li>
-            <li class="mb-1">
-              <a href="#!" style="color: #fff;">Voltar</a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-lg-3 col-md-6 mb-4">
-          <h5 class="mb-3" style="letter-spacing: 2px;">CONTATO</h5>
-          <ul class="list-unstyled mb-0">
-            <li class="mb-1">
-              <a href="#!" style="color: #fff;">(11) 98765-4321</a>
-            </li>
-            <li class="mb-1">
-              <a href="#!" style="color: #fff;">bruxa61@gmail.com</a>
-            </li>
-            <li class="mb-1">
-              <a href="#!" style="color: #fff;">@bruxa_61</a>
-            </li>
-          </ul>
-        </div>
+      <div class="text-center py-3 copyright">
+        © 2025 Bruxa_61 — Feito com ♥
       </div>
-    </div>
-    <div class="text-center p-3" style="background-color: rgb(241, 217, 190);">
-      © 2025 Copyright:
-      <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
-    </div>
-    <!-- Copyright -->
-  </footer>
-
-</div>
-<!-- End of .container -->
+    </footer>
 
   </body>
 </html>
