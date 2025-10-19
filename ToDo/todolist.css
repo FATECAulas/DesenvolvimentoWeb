@@ -3,12 +3,11 @@
 ======================= */
 
 :root {
-  --cafe-bg: #EAD2B7;
-  --cafe-main: #8A7E9A;
-  --cafe-accent: #88A999;
+  --cafe-bg: #fffdf3;
+  --cafe-main: #6a5088;
+  --cafe-accent: #f5872e;
   --cafe-dark: #2F2A26;
-  --cafe-light: #FFF9F2;
-  --cafe-wood: #B07B5C;
+  --cafe-light: #ffffff;
   --cafe-shadow: rgba(0, 0, 0, 0.1);
 }
 
@@ -16,7 +15,7 @@ body {
   background-color: var(--cafe-bg);
   background-image: 
     radial-gradient(rgba(255,255,255,0.3) 1px, transparent 1px),
-    linear-gradient(180deg, #EAD2B7 0%, #E6CBAA 100%);
+    linear-gradient(180deg, #000000 0%, #a09589 100%);
   background-size: 40px 40px, 100% 100%;
   min-height: 100vh;
   display: flex;
@@ -124,7 +123,8 @@ h1 {
 
 #task-list li:hover {
   transform: translateY(-2px);
-  background-color: #f8e5cc;
+  border: 2px solid var(--cafe-accent);
+  box-shadow: var(--cafe-accent) 2px 2px 10px;
 }
 
 /* Checkbox */
