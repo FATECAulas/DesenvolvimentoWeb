@@ -34,7 +34,7 @@ body {
   padding: 2rem;
   max-width: 520px;
   width: 100%;
-  top: 5rem;
+  top: 3rem;
 }
 
 /* Botão de voltar */
@@ -179,14 +179,4 @@ button.delete-btn:hover {
 /* ID do usuário */
 #user-id-display {
   color: #777;
-}
-
-/* Responsividade */
-@media (max-width: 480px) {
-  #todo-container {
-    padding: 1.5rem;
-  }
-  h1 {
-    font-size: 0.9rem;
-  }
 }
