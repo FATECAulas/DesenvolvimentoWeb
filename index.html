@@ -1,48 +1,89 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabelinha de pixel art</title>
-    <link rel="stylesheet" href="style.css">
+    <title>D.W</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
 </head>
+
 <body>
-    <div class="container">
-        <header>
-            <h1>Comidas em Pixel Art</h1>
-            <p>Confira os docinho em pixel!</p>
-        </header>
+    <div class="container-fluid">
+            <nav class="sidebar">
+                <div class="infos">
+                    <img src="https://i.pinimg.com/originals/80/79/98/807998920413239cd8407e9bd530b5eb.gif" alt="">
+                    <h5>Rafaela Botelho</h5>
+                </div>
+                
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#inicio">
+                            <i class="bi bi-house-fill me-2"></i> <!--icon bootstrap -->
+                            Início
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projetos">
+                            <i class="bi bi-folder-fill me-2"></i> <!--icon bootstrap -->
+                            Projetos
+                        </a>
+                    </li>
+                </ul>
+            </nav>
 
-        <div class="tabelinha">
-            <table>
-                <!-- COLUNAS -->
-                <tr class="colunas">
-                    <th>COMIDINHAS</th>
-                    <th>COR PRINCIPAL</th>
-                    <th>SABOR</th>
-                </tr>
+            <!-- Conteúdo Principal -->
+            <main>
+                <section id="inicio">
+                    <div class="sobre">
+                        <h1>Desenvolvimento Web</h1>
+                        <p>Minhas tarefas da aula</p>
+                    </div>
+                </section>
 
-                <tr>
-                    <td><img src="https://i.pinimg.com/736x/9b/6e/29/9b6e2904ab3f2ab07b55675f4abfa703.jpg" alt=""></td>
-                    <td id="verde">Verde</td>
-                    <td>Bolinho de Limão</td>
-                </tr>
+                <!--Cards TABELA-->
+                <section id="projetos">
+                    <div class="row"> 
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="card mb-4" style="width: 100%;"> <img src="https://i.pinimg.com/1200x/4c/7c/87/4c7c8723629b5bec407776720efb433a.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Tabela</h5>
+                                    <p class="card-text">Aula realizada em - 16/08/2025</p>
+                                    <a href="https://github.com/FATECAulas/DesenvolvimentoWeb/tree/Aula_30_Agosto/Tabela" class="btn btn-primary">GitHub</a>
+                                    <a href="Tabela/tabela.html" class="btn btn-primary2">Deploy</a>
+                                </div>
+                            </div>
+                        </div>
 
-                <tr>
-                    <td><img src="https://i.pinimg.com/736x/8b/83/3b/8b833b837b2f21989396914b54a0a62d.jpg" alt=""></td>
-                    <td id="rosa">Rosa</td>
-                    <td>Bolinho de Morango</td>
-                </tr>
+                        <!--Cards E-COMMERCE-->
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="card mb-4" style="width: 100%;"> <img src="https://i.pinimg.com/736x/91/f3/18/91f3181214318acbbc7bf0559bdb9fab.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">E-commerce</h5>
+                                    <p class="card-text">Aula realizada em - 27/08/2025</p>
+                                    <a href="https://github.com/FATECAulas/DesenvolvimentoWeb/tree/Aula_30_Agosto/E-commerce" class="btn btn-primary">GitHub</a>
+                                    <a href="E-commerce/ecommerce.html" class="btn btn-primary2">Deploy</a>
+                                </div>
+                            </div>
+                        </div>
 
-                <tr>
-                    <td><img src="https://i.pinimg.com/736x/b6/72/9c/b6729c6285b112841cba15a80af0b2dc.jpg" alt=""></td>
-                    <td id="marrom">Marrom</td>
-                    <td>Bolinho de Chocolate</td>
-                </tr>
-            </table>
-        </div>
-
+                        <!--Cards TO DO LIST-->
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="card mb-4" style="width: 100%;"> <img src="https://i.pinimg.com/1200x/b7/4c/fc/b74cfcbfca599d4e84d894b0d4824830.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">To-Do List</h5>
+                                    <p class="card-text">Aula realizada em - 18/10/2025</p>
+                                    <a href="https://github.com/FATECAulas/DesenvolvimentoWeb/tree/Aula_30_Agosto/ToDo" class="btn btn-primary">GitHub</a>
+                                    <a href="ToDo/todolist.html" class="btn btn-primary2">Deploy</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
     </div>
-
 </body>
 </html>

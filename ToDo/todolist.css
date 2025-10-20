@@ -1,0 +1,182 @@
+/* =======================
+   TODO LIST
+======================= */
+
+:root {
+  --cafe-bg: #fffdf3;
+  --cafe-main: #6a5088;
+  --cafe-accent: #f5872e;
+  --cafe-dark: #2F2A26;
+  --cafe-light: #ffffff;
+  --cafe-shadow: rgba(0, 0, 0, 0.1);
+}
+
+body {
+  background-color: var(--cafe-bg);
+  background-image: 
+    radial-gradient(rgba(255,255,255,0.3) 1px, transparent 1px),
+    linear-gradient(180deg, #000000 0%, #a09589 100%);
+  background-size: 40px 40px, 100% 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2rem;
+}
+
+/* Container principal */
+#todo-container {
+  position: relative;
+  background-color: var(--cafe-light);
+  border: 3px solid var(--cafe-main);
+  border-radius: 16px;
+  box-shadow: 0 8px 0 var(--cafe-main), 0 12px 25px var(--cafe-shadow);
+  padding: 2rem;
+  max-width: 520px;
+  width: 100%;
+  top: 3rem;
+}
+
+/* Botão de voltar */
+.back-btn {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background-color: var(--cafe-accent);
+  color: var(--cafe-light);
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: 0.2s ease;
+  box-shadow: 0 3px var(--cafe-dark);
+}
+
+.back-btn:hover {
+  background-color: var(--cafe-main);
+  transform: translateY(-2px);
+}
+
+.back-btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 1px var(--cafe-dark);
+}
+
+/* Título */
+h1 {
+  font-size: 1rem;
+  text-align: center;
+  color: var(--cafe-dark);
+  margin-bottom: 1.5rem;
+}
+
+/* Input e botão adicionar */
+#task-input {
+  background-color: #fffdf9;
+  border: 2px solid var(--cafe-main);
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  flex-grow: 1;
+  color: var(--cafe-dark);
+  font-size: 1rem;
+}
+
+#task-input:focus {
+  outline: none;
+  border-color: var(--cafe-accent);
+}
+
+#add-button {
+  background-color: var(--cafe-main);
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  padding: 0.75rem 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px var(--cafe-dark);
+}
+
+#add-button:hover {
+  background-color: var(--cafe-accent);
+  transform: translateY(-2px);
+}
+
+#add-button:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px var(--cafe-dark);
+}
+
+/* Lista */
+#task-list li {
+  background-color: var(--cafe-bg);
+  border: 2px solid var(--cafe-main);
+  border-radius: 12px;
+  padding: 0.8rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--cafe-dark);
+  transition: transform 0.2s ease, background-color 0.2s;
+}
+
+#task-list li:hover {
+  transform: translateY(-2px);
+  border: 2px solid var(--cafe-accent);
+  box-shadow: var(--cafe-accent) 2px 2px 10px;
+}
+
+/* Checkbox */
+.task-checkbox {
+  accent-color: var(--cafe-accent);
+  transform: scale(1.3);
+  margin-right: 0.75rem;
+  cursor: pointer;
+}
+
+/* Texto da tarefa */
+.task-text {
+  flex-grow: 1;
+  font-size: 1rem;
+}
+
+.task-checkbox:checked + .task-text {
+  text-decoration: line-through;
+  color: #8b8b8b;
+}
+
+/* Botão de excluir */
+button.delete-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.3rem;
+  transition: transform 0.2s ease;
+}
+
+button.delete-btn:hover {
+  transform: scale(1.2);
+}
+
+/* Mensagem */
+#message-area {
+  text-align: center;
+  border: 2px solid var(--cafe-accent);
+  background-color: #dff3e8;
+  color: var(--cafe-dark);
+  border-radius: 10px;
+  margin-top: 1rem;
+  padding: 0.8rem;
+  display: none;
+}
+
+#message-area.show {
+  display: block;
+}
+
+/* ID do usuário */
+#user-id-display {
+  color: #777;
+}

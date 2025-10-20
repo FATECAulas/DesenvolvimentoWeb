@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Halloween ToDo List</title>
+
+  <!-- Tailwind -->
+  <script>
+    tailwind = tailwind || {};
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'cafe-bg': '#EAD2B7',
+            'cafe-main': '#8A7E9A',
+            'cafe-accent': '#88A999',
+            'cafe-dark': '#333333',
+            'cafe-light': '#FFFFFF'
+          },
+          fontFamily: { sans: ['Inter', 'sans-serif'] }
+        }
+      }
+    };
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- CSS custom -->
+  <link rel="stylesheet" href="todolist.css">
+</head>
+<body class="flex items-start md:items-center justify-center p-4">
+
+    <button class="back-btn" onclick="history.back()"><a href="../index.html">← Voltar</a></button>
+
+    <div id="todo-container" class="w-full max-w-lg bg-cafe-light p-6 rounded-xl shadow-2xl mt-8 md:mt-0 border border-cafe-main/20">
+
+    <h1 class="text-3xl font-bold text-center text-cafe-dark mb-6">
+        🎃 To-Do List
+    </h1>
+
+
+    <form id="task-form" class="flex flex-col sm:flex-row gap-3 mb-6">
+      <input
+        type="text"
+        id="task-input"
+        placeholder="Ex: Preparar doces de Halloween"
+        required
+        class="flex-grow p-3 border-2 border-cafe-main/30 rounded-lg focus:outline-none focus:border-cafe-main transition duration-200 text-cafe-dark"
+      />
+      <button
+        type="submit"
+        id="add-button"
+        class="p-3 bg-cafe-main text-white font-semibold rounded-lg shadow-md hover:bg-cafe-dark transition duration-200 active:shadow-none whitespace-nowrap"
+      >
+        Adicionar
+      </button>
+    </form>
+
+    <ul id="task-list" class="space-y-3">
+      <li class="text-center text-gray-500 p-4">Carregando tarefas...</li>
+    </ul>
+
+    <div id="message-area" class="mt-4 p-3 hidden bg-red-100 text-red-700 rounded-lg" role="alert"></div>
+
+    <p class="text-xs text-center text-gray-400 mt-6">
+      ID do Usuário: <span id="user-id-display" class="font-mono text-gray-500">...</span>
+    </p>
+
+  </div>
+
+  <!-- Script principal -->
+  <script type="module" src="todolist.js"></script>
+</body>
+</html>
