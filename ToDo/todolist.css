@@ -1,5 +1,5 @@
 /* =======================
-   CAFE RACCOON TODO LIST
+   TODO LIST
 ======================= */
 
 :root {
@@ -34,6 +34,7 @@ body {
   padding: 2rem;
   max-width: 520px;
   width: 100%;
+  top: 3rem;
 }
 
 /* Botão de voltar */

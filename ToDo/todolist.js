@@ -1,6 +1,3 @@
-// todolist.js (módulo) - versão sem banco (localStorage)
-// Coloque este arquivo como "todolist.js" (mesma pasta do HTML).
-
 const STORAGE_PREFIX = 'cafe_raccoon_todos_';
 
 const taskListEl = document.getElementById('task-list');
